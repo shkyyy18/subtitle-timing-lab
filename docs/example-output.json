@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "synthetic_demo": true,
+  "thresholds": {
+    "max_cps": 20.0,
+    "gap_ms": 2000
+  },
+  "cues": [
+    {
+      "position": 1,
+      "index": 1,
+      "start_ms": 1000,
+      "end_ms": 6000,
+      "text": "Synthetic long cue",
+      "duration_ms": 5000,
+      "visible_codepoints": 16,
+      "cps": 3.2
+    },
+    {
+      "position": 2,
+      "index": 2,
+      "start_ms": 2000,
+      "end_ms": 3000,
+      "text": "Nested example",
+      "duration_ms": 1000,
+      "visible_codepoints": 13,
+      "cps": 13.0
+    },
+    {
+      "position": 3,
+      "index": 3,
+      "start_ms": 4000,
+      "end_ms": 4300,
+      "text": "A fast synthetic subtitle",
+      "duration_ms": 300,
+      "visible_codepoints": 22,
+      "cps": 73.33
+    },
+    {
+      "position": 4,
+      "index": 4,
+      "start_ms": 10000,
+      "end_ms": 11000,
+      "text": "After a gap",
+      "duration_ms": 1000,
+      "visible_codepoints": 9,
+      "cps": 9.0
+    }
+  ],
+  "findings": [
+    {
+      "kind": "high_cps",
+      "cue": 3,
+      "cps": 73.33
+    },
+    {
+      "kind": "overlap",
+      "cue": 2,
+      "related_cue": 1,
+      "overlap_ms": 1000
+    },
+    {
+      "kind": "overlap",
+      "cue": 3,
+      "related_cue": 1,
+      "overlap_ms": 300
+    },
+    {
+      "kind": "gap",
+      "cue": 4,
+      "gap_ms": 4000
+    }
+  ],
+  "finding_count": 4,
+  "boundary": "Finding cue IDs refer to file position, not possibly duplicated SRT index. Overlaps include nested intervals. Touching boundaries are not overlaps. Reading speed is a configurable heuristic, not editorial judgment."
+}

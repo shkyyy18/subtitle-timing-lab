@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "subtitle-timing-lab"
+version = "0.1.0"
+description = "Inspect SRT timing overlaps and reading-speed heuristics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "subtitle-timing-lab contributors"}]
+classifiers = ["Development Status :: 3 - Alpha", "Programming Language :: Python :: 3"]
+[project.scripts]
+subtitle-timing-lab = "subtitle_timing_lab.__main__:cli"
+[project.urls]
+Repository = "https://github.com/shkyyy18/subtitle-timing-lab"
+[tool.setuptools.packages.find]
+where = ["src"]
